@@ -1,0 +1,1624 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Im a Basic Coder</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="overlay" onclick="tutupMenu()"></div>
+
+    <header>
+      <div class="header-container">
+        <div id="menu-icon" class="menu-icon" onclick="bukaMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <h1>Basic CoderEdu</h1>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h2>Daftar Modul</h2>
+        <i class="fas fa-times close-icon" onclick="tutupMenu()"></i>
+      </div>
+
+      <div class="sidebar-links">
+        <div class="menu-dropdown" onclick="toggleDropdown(this)">
+          <span><i class="fas fa-code"></i> HTML</span>
+          <i class="fas fa-caret-right triangle-icon"></i>
+        </div>
+        <div class="dropdown-container">
+          <a
+            href="#"
+            class="sub-link active"
+            onclick="bukaMateri('pengertian', event)"
+            ><i class="fas fa-book-open"></i> Pengertian HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('elements', event)"
+            ><i class="fas fa-cube"></i> Element HTML</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('judul-halaman', event)"
+            ><i class="fas fa-heading"></i> Heading HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('paragraf', event)"
+            ><i class="fas fa-paragraph"></i> Paragraf HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('kutipan', event)"
+            ><i class="fas fa-quote-left"></i> Kutipan HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('komentar', event)"
+            ><i class="fas fa-comment-slash"></i> Komentar HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('warna', event)"
+            ><i class="fas fa-palette"></i> Warna HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('tautan', event)"
+            ><i class="fas fa-link"></i> Link HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('gambar', event)"
+            ><i class="fas fa-image"></i> Gambar HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('favicon', event)"
+            ><i class="fas fa-star"></i> Favicon HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('tabel', event)"
+            ><i class="fas fa-table"></i> Tabel HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('div', event)"
+            ><i class="fas fa-box"></i> Div HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('kelas-html', event)"
+            ><i class="fas fa-tags"></i> Class HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('id-html', event)"
+            ><i class="fas fa-fingerprint"></i> ID HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('button', event)"
+            ><i class="fas fa-mouse-pointer"></i> Button HTML</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('kuis', event)"
+            ><i class="fas fa-question-circle"></i> Kuis Evaluasi HTML</a
+          >
+        </div>
+
+        <div class="menu-dropdown" onclick="toggleDropdown(this)">
+          <span><i class="fab fa-css3-alt"></i> CSS</span>
+          <i class="fas fa-caret-right triangle-icon"></i>
+        </div>
+        <div class="dropdown-container">
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-pengertian', event)"
+            ><i class="fas fa-book-open"></i> Pengertian CSS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-sintaks', event)"
+            ><i class="fas fa-terminal"></i> Sintaks CSS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-selector', event)"
+            ><i class="fas fa-mouse-pointer"></i> Element Selector CSS</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('css-cara', event)"
+            ><i class="fas fa-plus-circle"></i> Cara Menambahkan CSS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-comment', event)"
+            ><i class="fas fa-comment-slash"></i> Komentar CSS</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('css-color', event)"
+            ><i class="fas fa-palette"></i> Color CSS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-background', event)"
+            ><i class="fas fa-image"></i> Background CSS
+          </a>
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-borders', event)"
+            ><i class="fas fa-square"></i> BorderCSS
+          </a>
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-padding', event)"
+            ><i class="fas fa-compress-alt"></i> Padding CSS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-margins', event)"
+            ><i class="fas fa-expand-arrows-alt"></i> Margin CSS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('css-outline', event)"
+            ><i class="fas fa-border-style"></i> Outline CSS
+          </a>
+          <a href="#" class="sub-link" onclick="bukaMateri('kuis-css', event)"
+            ><i class="fas fa-edit"></i> Kuis Latihan CSS</a
+          >
+        </div>
+        <div class="menu-dropdown" onclick="toggleDropdown(this)">
+          <span><i class="fab fa-js-square"></i> JavaScript</span>
+          <i class="fas fa-caret-right triangle-icon"></i>
+        </div>
+        <div class="dropdown-container">
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('js-pengertian', event)"
+            ><i class="fas fa-book-open"></i> Pengertian JS</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('js-cara', event)"
+            ><i class="fas fa-plus-circle"></i> Cara Menambahkan</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('js-sintaks', event)"
+            ><i class="fas fa-terminal"></i> Sintaks JS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('js-operator', event)"
+            ><i class="fas fa-calculator"></i> Operator JS</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('js-kondisi', event)"
+            ><i class="fas fa-code-branch"></i> Kondisi IF JS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('js-perulangan', event)"
+            ><i class="fas fa-redo"></i> Perulangan JS</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('js-functions', event)"
+            ><i class="fas fa-cubes"></i> Functions JS</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('js-class', event)"
+            ><i class="fas fa-project-diagram"></i> Class JS</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('js-array', event)"
+            ><i class="fas fa-th-list"></i> Array JS</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('kuis-js', event)"
+            ><i class="fas fa-edit"></i> Kuis Latihan JS</a
+          >
+        </div>
+        <div class="menu-dropdown" onclick="toggleDropdown(this)">
+          <span><i class="fab fa-java"></i> JAVA</span>
+          <i class="fas fa-caret-right triangle-icon"></i>
+        </div>
+        <div class="dropdown-container">
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('java-pengertian', event)"
+            ><i class="fas fa-book"></i> Pengertian JAVA</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('java-hello', event)"
+            ><i class="fas fa-terminal"></i> Print Hello World</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('java-syntax', event)"
+            ><i class="fas fa-font"></i> Syntax JAVA</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('java-output', event)"
+            ><i class="fas fa-desktop"></i> Output JAVA</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('java-komen', event)"
+            ><i class="fas fa-comment"></i> Komentar JAVA</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('java-variabel', event)"
+            ><i class="fas fa-box"></i> Variabel JAVA</a
+          >
+
+          <div
+            class="nested-dropdown"
+            onclick="toggleNestedDropdown(this, event)"
+          >
+            <span><i class="fas fa-database"></i> Tipe Data JAVA</span>
+            <i class="fas fa-caret-right nested-triangle"></i>
+          </div>
+          <div class="nested-container">
+            <a
+              href="#"
+              class="sub-link"
+              onclick="bukaMateri('java-td-primitive', event)"
+              ><i class="fas fa-circle"></i> Primitive Types</a
+            >
+            <a
+              href="#"
+              class="sub-link"
+              onclick="bukaMateri('java-td-nonprimitive', event)"
+              ><i class="fas fa-square"></i> Non-Primitive Types</a
+            >
+          </div>
+
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('java-operator', event)"
+            ><i class="fas fa-calculator"></i> Operator JAVA</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('java-kondisi', event)"
+            ><i class="fas fa-code-branch"></i> Seleksi Kondisi JAVA</a
+          >
+          <a
+            href="#"
+            class="sub-link"
+            onclick="bukaMateri('java-switch', event)"
+            ><i class="fas fa-list-ul"></i> Switch Case JAVA</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('java-while', event)"
+            ><i class="fas fa-redo"></i> While Loop JAVA</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('java-for', event)"
+            ><i class="fas fa-sync"></i> For Loop JAVA</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('java-break', event)"
+            ><i class="fas fa-stop"></i> Break & Continue</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('java-array', event)"
+            ><i class="fas fa-th-list"></i> Array JAVA</a
+          >
+          <a href="#" class="sub-link" onclick="bukaMateri('kuis-java', event)"
+            ><i class="fas fa-edit"></i> Kuis Latihan JAVA</a
+          >
+        </div>
+        <a href="#" class="sub-link" onclick="bukaMateri('halaman-tujuan')">
+          <i class="fas fa-bullseye"></i> Tujuan Pembelajaran
+        </a>
+        <a href="#" class="sub-link" onclick="bukaMateri('halaman-profil')">
+          <i class="fas fa-user-graduate"></i> Profil Pengembang
+        </a>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <div id="halaman-tujuan" class="materi-section" style="display: none">
+        <h2 class="judul-materi">Tujuan Pembelajaran</h2>
+        <p class="deskripsi-tujuan">
+          Website <strong>Basic CoderEdu</strong> dirancang khusus sebagai ruang
+          belajar mandiri yang interaktif untuk membantu Anda:
+        </p>
+
+        <div class="kartu-tujuan-container">
+          <div class="kartu-tujuan">
+            <h3>Pondasi Kuat</h3>
+            <p>
+              Memahami logika dasar HTML, CSS, JavaScript dan Java secara
+              organik tanpa ketergantungan *copy-paste* dari AI.
+            </p>
+          </div>
+          <div class="kartu-tujuan">
+            <h3>Berpikir Kritis</h3>
+            <p>
+              Mengasah insting pemecahan masalah <i>problem-solving</i> lewat
+              evaluasi kuis terstruktur.
+            </p>
+          </div>
+          <div class="kartu-tujuan">
+            <h3>Belajar Fleksibel</h3>
+            <p>
+              Mengakses rangkuman materi koding yang ringkas dan ramah ponsel
+              kapan saja dan di mana saja.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="halaman-profil" class="materi-section" style="display: none">
+        <h2 class="judul-materi">Profil Pengembang</h2>
+        <div class="kartu-profil">
+          <div class="bingkai-foto">
+            <img src="aku.jpeg" alt="Foto Pengembang" class="foto-biodata" />
+          </div>
+          <div class="biodata-info">
+            <div class="grup-info">
+              <span class="label-bio">Nama Lengkap</span>
+              <span class="isi-bio">Karimah</span>
+            </div>
+            <div class="grup-info">
+              <span class="label-bio">NIM</span>
+              <span class="isi-bio">250631100033</span>
+            </div>
+            <div class="grup-info">
+              <span class="label-bio">Program Studi</span>
+              <span class="isi-bio">Pendidikan Informatika</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pengertian" class="materi-section">
+        <h1>Pengertian HTML</h1>
+        <p>
+          HTML (HyperText Markup Language) adalah bahasa pemrograman standar
+          yang digunakan untuk membuat susunan struktur dasar sebuah halaman
+          website. Ibarat membangun sebuah rumah, HTML bertindak sebagai
+          dinding, tiang, dan kerangka atapnya sebelum rumah tersebut dicat atau
+          dihias. Melalui dokumen HTML, kita dapat menampilkan teks, menyisipkan
+          gambar, hingga menghubungkan satu halaman dengan halaman lainnya di
+          internet.
+        </p>
+      </div>
+      <div id="elements" class="materi-section" style="display: none">
+        <h1>Element HTML</h1>
+        <p>
+          Elemen HTML adalah komponen penyusun dokumen web yang terdiri dari tag
+          pembuka, isi konten di dalamnya, serta diakhiri dengan tag penutup.
+          Setiap elemen memberi tahu browser bagaimana cara menampilkan konten
+          tersebut kepada pengguna secara visual. Mengetahui cara menulis elemen
+          dengan benar adalah kunci utama dalam menguasai HTML secara
+          keseluruhan.
+        </p>
+        <div class="code-title">Struktur Element:</div>
+        <div class="code-example">
+          &lt;tagname&gt;Konten Anda disini...&lt;/tagname&gt;
+        </div>
+      </div>
+      <div id="judul-halaman" class="materi-section" style="display: none">
+        <h1>Heading HTML</h1>
+        <p>
+          HTML memiliki enam tingkatan heading atau judul halaman yang
+          didefinisikan dengan tag <code>&lt;h1&gt;</code> hingga
+          <code>&lt;h6&gt;</code>. Elemen <code>&lt;h1&gt;</code> digunakan
+          untuk judul utama yang paling penting dan berukuran paling besar,
+          sementara elemen <code>&lt;h6&gt;</code> digunakan untuk sub-judul
+          yang paling tidak penting dengan ukuran terkecil.
+        </p>
+        <p>Syntax Kode:</p>
+        <pre class="code-example">
+          <code>&lt;h1&gt;Judul Tingkat 1&lt;/h1&gt; <br>
+          &lt;h2&gt;Judul Tingkat 2&lt;/h2&gt; <br>
+          &lt;h3&gt;Judul Tingkat 3&lt;/h3&gt; <br>
+          &lt;h4&gt;Judul Tingkat 4&lt;/h4&gt; <br>
+          &lt;h5&gt;Judul Tingkat 5&lt;/h5&gt; <br>
+          &lt;h6&gt;Judul Tingkat 6&lt;/h6&gt;</code>
+        </pre>
+        <div class="preview-title">Hasil Tampilan di Layar (Live Preview):</div>
+        <div class="preview-box">
+          <h1 style="margin: 5px 0; color: #333">Judul Tingkat 1</h1>
+          <h2 style="margin: 5px 0; color: #333">Judul Tingkat 2</h2>
+          <h3 style="margin: 5px 0; color: #333">Judul Tingkat 3</h3>
+          <h4 style="margin: 5px 0; color: #333">Judul Tingkat 4</h4>
+          <h5 style="margin: 5px 0; color: #333">Judul Tingkat 5</h5>
+          <h6 style="margin: 5px 0; color: #333">Judul Tingkat 6</h6>
+        </div>
+      </div>
+      <div id="paragraf" class="materi-section" style="display: none">
+        <h1>Paragraf HTML</h1>
+        <p>
+          Paragraf dalam HTML selalu diawali dengan baris baru dan didefinisikan
+          menggunakan tag <code>&lt;p&gt;</code>. Browser web secara otomatis
+          akan menambahkan ruang kosong atau margin sebelum dan sesudah paragraf
+          tersebut agar teks nyaman dibaca oleh pengguna di layar gadget.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;p&gt;Ini adalah sebuah paragraf teks.&lt;/p&gt;
+        </div>
+        <div class="preview-title">Hasil:</div>
+        <div class="preview-box">
+          <p style="color: #333">Ini adalah sebuah paragraf teks.</p>
+        </div>
+      </div>
+      <div id="kutipan" class="materi-section" style="display: none">
+        <h1>Kutipan HTML</h1>
+        <p>
+          Elemen kutipan digunakan untuk menandai bagian teks yang diambil
+          langsung dari sumber atau pernyataan orang lain. HTML menyediakan tag
+          <code>&lt;blockquote&gt;</code> untuk kutipan panjang berbentuk blok
+          paragraf tersendiri, dan tag <code>&lt;q&gt;</code> untuk kutipan
+          pendek yang berada di dalam baris kalimat biasa lengkap dengan tanda
+          petik otomatis.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;p&gt;Dia berkata, <br />&lt;q&gt;Tetap semangat belajar!&lt;/q&gt;
+          <br />&lt;/p&gt;
+        </div>
+        <div class="preview-title">Hasil:</div>
+        <div class="preview-box">
+          <p style="color: #333">Dia berkata, <q>Tetap semangat belajar!</q></p>
+        </div>
+      </div>
+      <div id="komentar" class="materi-section" style="display: none">
+        <h1>Komentar HTML</h1>
+        <p>
+          Komentar HTML adalah baris kode catatan yang sengaja disisipkan untuk
+          membantu developer memahami alur struktur kode pemrograman. Bagian
+          komentar yang diawali dengan penanda tertentu ini tidak akan diproses
+          atau ditampilkan oleh browser kepada pengguna umum di halaman depan
+          website Anda.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;!-- Komentar ini tidak akan tampil di browser--&gt;
+        </div>
+      </div>
+      <div id="warna" class="materi-section" style="display: none">
+        <h1>Color HTML</h1>
+        <p>
+          Penulisan warna pada elemen HTML dapat dikonfigurasikan dengan
+          menggunakan nama warna bahasa Inggris yang terstandarisasi, ataupun
+          menggunakan format nilai kode seperti HEX, RGB, dan HSL. Warna ini
+          bisa diterapkan langsung pada teks maupun sebagai latar belakang kotak
+          elemen.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;p style="color:#ff6b81;"&gt; <br />
+          Teks berwarna pink <br />&lt;/p&gt;
+        </div>
+        <div class="preview-title">Hasil:</div>
+        <div class="preview-box">
+          <p style="color: #ff03ea; font-weight: bold">Teks berwarna pink</p>
+        </div>
+      </div>
+      <div id="tautan" class="materi-section" style="display: none">
+        <h1>Link HTML</h1>
+        <p>
+          Tautan atau hyperlink dibuat menggunakan tag jangkar yaitu
+          <code>&lt;a&gt;</code>, yang berfungsi menghubungkan pengguna ke
+          alamat halaman web eksternal maupun internal. Atribut paling krusial
+          di dalam tag ini adalah <code>href</code> yang mendefinisikan target
+          URL tujuan ketika teks tautan tersebut diklik.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;a href="#"&gt;Klik Link Ini&lt;/a&gt;
+        </div>
+        <div class="preview-title">Hasil:</div>
+        <div class="preview-box">
+          <a href="#" style="color: #ff8fa3; font-weight: bold"
+            >Klik Link Ini</a
+          >
+        </div>
+      </div>
+      <div id="gambar" class="materi-section" style="display: none">
+        <h1>Gambar HTML</h1>
+        <p>
+          Untuk menyisipkan ilustrasi gambar ke dalam halaman web, kita
+          menggunakan elemen tunggal <code>&lt;img&gt;</code> tanpa tag penutup.
+          Elemen ini mengandalkan atribut <code>src</code> yang mengarah pada
+          direktori file gambar, serta atribut <code>alt</code> untuk
+          menampilkan teks deskripsi cadangan jika gambar gagal dimuat.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;img src="logo.png" alt="Logo Belajar" width="100"&gt;
+        </div>
+      </div>
+      <div id="favicon" class="materi-section" style="display: none">
+        <h1>Favicon HTML</h1>
+        <p>
+          Favicon merupakan ikon atau logo gambar berukuran sangat kecil yang
+          muncul tepat di samping teks judul halaman pada tab browser internet
+          Anda. Elemen favicon ini umumnya dikonfigurasikan di dalam bagian
+          kepala dokumen web atau tag khusus berbentuk tautan relasi icon.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;
+        </div>
+      </div>
+      <div id="tabel" class="materi-section" style="display: none">
+        <h1>Tabel HTML</h1>
+        <p>
+          Pembuatan susunan baris data kotak terstruktur dilakukan melalui tag
+          pembungkus utama <code>&lt;table&gt;</code>. Di dalamnya terdapat
+          elemen baris <code>&lt;tr&gt;</code>, elemen judul kolom tabel yang
+          tebal <code>&lt;th&gt;</code>, serta baris kolom pengisian sel data
+          informasi normal yaitu tag <code>&lt;td&gt;</code>.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;table&gt; <br />
+          &lt;tr&gt; <br />
+          &lt;th&gt;Menu&lt;/th&gt; <br />&lt;/tr&gt; <br />
+          &lt;tr&gt; <br />
+          &lt;td&gt;Data HTML&lt;/td&gt; <br />
+          &lt;/tr&gt; <br />
+          &lt;/table&gt;
+        </div>
+
+        <div class="preview-title">Hasil:</div>
+        <div class="preview-box">
+          <table
+            border="1"
+            style="border-collapse: collapse; width: 100%; color: #333"
+          >
+            <tr style="background: #fff0f3">
+              <th style="padding: 5px">Menu</th>
+            </tr>
+            <tr>
+              <td style="padding: 5px">Data HTML</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="div" class="materi-section" style="display: none">
+        <h1>Div HTML</h1>
+        <p>
+          Tag pembungkus generic <code>&lt;div&gt;</code> digunakan sebagai
+          wadah penampung berkelompok untuk menyatukan beberapa elemen HTML
+          sekaligus menjadi satu kesatuan blok. Elemen ini sangat berguna dalam
+          mempermudah penataan tata letak layout ataupun membagi area halaman
+          situs sebelum dihias memakai CSS.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;div&gt; <br />
+          &lt;h2&gt;Judul di dalam Div&lt;/h2&gt; <br />
+          &lt;p&gt;Paragraf ini berada di dalam satu wadah pembungkus.&lt;/p&gt;
+          <br />
+          &lt;/div&gt;
+        </div>
+      </div>
+      <div id="kelas-html" class="materi-section" style="display: none">
+        <h1>Class HTML</h1>
+        <p>
+          Atribut <code>class</code> digunakan untuk memberikan label nama
+          penanda identitas kelompok pada satu atau beberapa elemen HTML secara
+          massal. Dengan menggunakan kelas, Anda dapat mengatur gaya desain
+          tampilan atau memprogram banyak baris elemen yang berbeda secara
+          serentak dari file eksternal.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;p class="teks-pink"&gt; <br />Paragraf pertama berwarna pink.
+          <br />&lt;/p&gt; <br />
+          &lt;p class="teks-pink"&gt; <br />Paragraf kedua juga berwarna pink.
+          <br />&lt;/p&gt;
+        </div>
+      </div>
+      <div id="id-html" class="materi-section" style="display: none">
+        <h1>ID HTML</h1>
+        <p>
+          Atribut <code>id</code> berfungsi menetapkan pengenal atau identitas
+          unik yang mutlak bersifat tunggal dan khusus untuk satu elemen HTML
+          saja di dalam satu halaman web. Nilai id dilarang keras memiliki nama
+          kembar, karena digunakan sebagai target utama penataan CSS spesifik
+          atau manipulasi JavaScript.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;div id="header-utama"&gt; <br />
+          &lt;h1&gt;Selamat Datang di Basic CoderEdu&lt;/h1&gt;<br />
+          &lt;/div&gt;
+        </div>
+      </div>
+      <div id="button" class="materi-section" style="display: none">
+        <h1>Tombol HTML</h1>
+        <p>
+          Elemen tombol interaktif didefinisikan dengan menggunakan tag
+          <code>&lt;button&gt;</code> yang memungkinkannya dapat diklik oleh
+          pengguna. Penggunaan tombol ini hampir selalu dipadukan dengan script
+          logika JavaScript agar dapat memicu tindakan aksi tertentu seperti
+          memunculkan pesan, mengirim formulir, atau memproses data.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          &lt;button type="button" class="btn-utama"&gt; <br />Klik Di Sini
+          <br />&lt;/button&gt;
+        </div>
+        <div class="preview-title">Hasil:</div>
+        <div class="preview-box">
+          <button style="margin-top: 0">Klik Aku</button>
+        </div>
+      </div>
+
+      <div id="kuis" class="materi-section" style="display: none">
+        <h1>Uji Kemampuan HTML</h1>
+        <div class="quiz-container">
+          <div id="quiz-card-container">
+            <div
+              id="quiz-progress"
+              style="
+                font-size: 14px;
+                color: #888;
+                margin-bottom: 10px;
+                font-weight: bold;
+              "
+            >
+              Soal 1 dari 10
+            </div>
+            <p
+              id="quiz-question"
+              style="font-size: 16px; font-weight: 600; margin-bottom: 15px"
+            ></p>
+            <div id="quiz-options"></div>
+            <p
+              id="hasil-kuis"
+              style="margin-top: 15px; font-weight: bold; min-height: 24px"
+            ></p>
+            <div
+              class="quiz-buttons"
+              style="display: flex; gap: 10px; margin-top: 15px"
+            >
+              <button id="btn-submit-quiz" onclick="cekJawabanKuis()">
+                Kirim Jawaban
+              </button>
+              <button
+                id="btn-next-quiz"
+                onclick="lanjutSoalKuis()"
+                style="display: none; background-color: #ff4d6d"
+              >
+                Selanjutnya <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="css-pengertian" class="materi-section" style="display: none">
+        <h1>Pengertian CSS</h1>
+        <p>
+          CSS (Cascading Style Sheets) adalah bahasa pemrograman desain yang
+          digunakan untuk mengatur dan mengontrol tampilan visual halaman
+          website yang dibuat menggunakan HTML. Jika HTML diibaratkan sebagai
+          struktur tulang atau dinding batako dari sebuah rumah, maka CSS
+          bertindak sebagai cat dinding, dekorasi interior, gorden, tata letak
+          lampu, hingga penataan furnitur agar rumah tersebut terlihat indah,
+          rapi, dan estetis.
+        </p>
+        <p>
+          Dengan menggunakan CSS, Anda dapat memisahkan konten (HTML) dari
+          desain (CSS). Hal ini mempermudah pengelolaan web karena Anda bisa
+          mengubah tampilan seluruh halaman website hanya dengan memodifikasi
+          satu file CSS saja.
+        </p>
+      </div>
+
+      <div id="css-sintaks" class="materi-section" style="display: none">
+        <h1>Sintaks CSS</h1>
+        <p>
+          Aturan penulisan (sintaks) CSS sangat sederhana dan terdiri dari dua
+          komponen utama, yaitu: <strong>Selector</strong> dan
+          <strong>Declaration Block (Blok Deklarasi)</strong>.
+        </p>
+        <p>
+          Selector berfungsi untuk menunjuk elemen HTML mana yang ingin dihias,
+          sedangkan Blok Deklarasi (dimulai dengan <code>{</code> dan diakhiri
+          <code>}</code>) berisi satu atau beberapa deklarasi gaya yang
+          dipisahkan oleh tanda titik koma (<code>;</code>). Setiap deklarasi
+          terdiri dari <strong>Property</strong> (nama efek) dan
+          <strong>Value</strong> (nilai efek) yang dipisahkan tanda titik dua
+          (<code>:</code>).
+        </p>
+
+        <div class="code-title">Aturan Struktur Sintaks:</div>
+        <div class="code-example">
+          selector { <br />
+          property: value; property: value; <br />}
+        </div>
+      </div>
+
+      <div id="css-selector" class="materi-section" style="display: none">
+        <h1>Element Selector CSS</h1>
+        <p>
+          Element Selector digunakan untuk memilih dan mengatur gaya seluruh
+          elemen HTML berdasarkan nama tag-nya secara langsung (seperti
+          <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, atau
+          <code>&lt;button&gt;</code>). Semua elemen dengan nama tag yang sama
+          di halaman tersebut akan otomatis mengikuti aturan desain yang telah
+          ditentukan.
+        </p>
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          p { <br />
+          color: #ff4d6d; text-align: center;<br />
+          }
+        </div>
+        <div class="preview-title">Hasil Tampilan di Layar (Live Preview):</div>
+        <div class="preview-box">
+          <p style="color: #ff4d6d; text-align: center; margin: 0">
+            Semua paragraf di halaman ini otomatis menjadi warna pink dan rata
+            tengah!
+          </p>
+        </div>
+      </div>
+
+      <div id="css-cara" class="materi-section" style="display: none">
+        <h1>Cara Menambahkan CSS ke HTML</h1>
+        <p>
+          Ada 3 metode utama untuk menyisipkan atau mengaplikasikan kode CSS ke
+          dalam dokumen HTML:
+        </p>
+        <ol
+          style="color: var(--text-color); padding-left: 20px; line-height: 1.6"
+        >
+          <li>
+            <strong>Inline CSS:</strong> Ditulis langsung di dalam tag HTML
+            menggunakan atribut <code>style</code>.
+          </li>
+          <li>
+            <strong>Internal CSS:</strong> Ditulis di dalam satu file HTML yang
+            sama, diletakkan di dalam elemen <code>&lt;style&gt;</code> pada
+            bagian <code>&lt;head&gt;</code>.
+          </li>
+          <li>
+            <strong>External CSS:</strong> Ditulis di file terpisah berformat
+            <code>.css</code>, lalu dihubungkan ke HTML menggunakan tag
+            <code>&lt;link&gt;</code> di dalam bagian
+            <code>&lt;head&gt;</code> (Metode paling direkomendasikan).
+          </li>
+        </ol>
+        <div class="code-title">Contoh Kode (External CSS):</div>
+        <div class="code-example">
+          &lt;head&gt; <br />
+          &lt;link rel="stylesheet" href="style.css"&gt;<br />
+          &lt;/head&gt;
+        </div>
+      </div>
+
+      <div id="css-comment" class="materi-section" style="display: none">
+        <h1>Komentar CSS</h1>
+        <p>
+          Komentar CSS adalah catatan atau penjelasan yang ditulis di dalam file
+          CSS untuk membantu developer memahami alur penulisan kode. Komentar
+          ini sepenuhnya diabaikan oleh browser dan tidak akan memengaruhi
+          tampilan website Anda. Komentar CSS dimulai dengan tanda
+          <code>/*</code> dan diakhiri dengan tanda <code>*/</code>.
+        </p>
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          /* Ini adalah komentar satu baris */ <br />
+          p { color: black; <br />
+          /* Mengatur warna teks menjadi hitam */ <br />}<br />
+          /* Ini adalah komentar yang ditulis lebih dari satu baris */
+        </div>
+      </div>
+
+      <div id="css-color" class="materi-section" style="display: none">
+        <h1>Color CSS</h1>
+        <p>
+          CSS mendukung banyak format penulisan warna untuk teks, latar
+          belakang, maupun border. Tiga format yang paling populer digunakan
+          adalah nama warna langsung (<strong>Color Names</strong>), kode
+          <strong>HEX</strong> (#RRGGBB), dan nilai <strong>RGB</strong> (Red,
+          Green, Blue).
+        </p>
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          h3 {<br />
+          color: tomato; <br />} <br />p { <br />color: #ff8fa3; <br />}<br />
+          span {<br />
+          color: rgb(255, 77, 109); <br />}
+        </div>
+        <div class="preview-title">Hasil Tampilan di Layar (Live Preview):</div>
+        <div class="preview-box">
+          <h3 style="color: tomato; margin: 0 0 5px 0">Warna Tomato</h3>
+          <p style="color: #ff8fa3; margin: 0 0 5px 0; font-weight: bold">
+            Warna HEX Pink Soft (#ff8fa3)
+          </p>
+          <span style="color: rgb(255, 77, 109); font-weight: bold"
+            >Warna RGB Pink Cerah</span
+          >
+        </div>
+      </div>
+
+      <div id="css-background" class="materi-section" style="display: none">
+        <h1>Background CSS</h1>
+        <p>
+          Property background digunakan untuk mengatur efek latar belakang dari
+          suatu elemen HTML. Anda bisa mengatur warna latar belakang menggunakan
+          <code>background-color</code> ataupun menyisipkan gambar sebagai latar
+          belakang menggunakan properti <code>background-image</code>.
+        </p>
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          .kotak-bg { <br />
+          background-color: #fff0f3; <br />
+          padding: 15px; <br />}
+        </div>
+        <div class="preview-title">Hasil Tampilan di Layar (Live Preview):</div>
+        <div class="preview-box">
+          <div
+            style="
+              background-color: #fff0f3;
+              padding: 15px;
+              border-radius: 6px;
+              color: #333;
+              text-align: center;
+              font-weight: bold;
+            "
+          >
+            Kotak ini menggunakan latar belakang background-color berwarna soft
+            pink!
+          </div>
+        </div>
+      </div>
+
+      <div id="css-borders" class="materi-section" style="display: none">
+        <h1>Border CSS</h1>
+        <p>
+          Property CSS Border memungkinkan Anda untuk menentukan garis tepi di
+          sekitar elemen HTML. Properti ini membutuhkan tiga nilai utama:
+          ketebalan garis (border-width), gaya garis seperti lurus/putus-putus
+          (border-style), dan warna garis (border-color).
+        </p>
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          .kotak-border {<br />
+          border-width: 2px; <br />border-style: dashed; <br />
+          border-color: #ff4d6d;<br />
+          }
+        </div>
+        <div class="preview-title">Hasil Tampilan di Layar (Live Preview):</div>
+        <div class="preview-box">
+          <div
+            style="
+              border: 2px dashed #ff4d6d;
+              padding: 15px;
+              text-align: center;
+              color: #333;
+              font-weight: bold;
+              background: white;
+            "
+          >
+            Kotak dengan garis tepi putus-putus (dashed border) berwarna pink!
+          </div>
+        </div>
+      </div>
+
+      <div id="css-padding" class="materi-section" style="display: none">
+        <h1>Padding CSS</h1>
+        <p>
+          CSS Padding digunakan untuk membuat ruang kosong di
+          <strong>dalam</strong> elemen, yaitu jarak antara konten utama
+          (seperti teks atau gambar) dengan batas garis tepi (border) milik
+          elemen itu sendiri. Padding sepenuhnya bersifat transparan dan akan
+          ikut menduplikasi warna latar belakang dari elemen tersebut.
+        </p>
+
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          /* Jarak ruang di dalam kotak */ <br />
+          .kotak-padding {<br />
+          border: 2px solid #ccc;<br />
+          padding: 25px; <br />
+          }
+        </div>
+        <div class="preview-title">Hasil Tampilan di Layar (Live Preview):</div>
+        <div class="preview-box" style="padding: 10px">
+          <div
+            style="
+              border: 2px solid #ff8fa3;
+              padding: 25px;
+              background-color: white;
+              color: #333;
+              text-align: center;
+            "
+          >
+            Teks ini memiliki jarak longgar sebesar 25px dari garis tepi pink di
+            sekelilingnya karena efek padding.
+          </div>
+        </div>
+      </div>
+
+      <div id="css-margins" class="materi-section" style="display: none">
+        <h1>Margin CSS</h1>
+        <p>
+          Berbeda dengan padding, CSS Margin digunakan untuk membuat ruang
+          kosong di <strong>luar</strong> elemen, yaitu mengatur jarak pemisah
+          antara elemen tersebut dengan elemen-elemen lain yang berada di
+          sekitarnya. Margin menciptakan jarak antar kotak secara horizontal
+          maupun vertikal dan tidak memiliki warna latar belakang (selalu
+          transparan).
+        </p>
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          .kotak-margin { <br />
+          margin: 30px; <br />/* Jarak kotak dari luar */ <br />border: 2px
+          solid #333; <br />}
+        </div>
+        <div class="preview-title">Visualisasi Efek Jarak Jauh Margin:</div>
+        <div class="preview-box" style="background: #eee; padding: 5px">
+          <div
+            style="
+              background: #ff4d6d;
+              color: white;
+              padding: 10px;
+              text-align: center;
+              margin-bottom: 20px;
+            "
+          >
+            Kotak Atas (Memiliki Margin Bawah 20px)
+          </div>
+          <div
+            style="
+              background: #343a40;
+              color: white;
+              padding: 10px;
+              text-align: center;
+            "
+          >
+            Kotak Bawah terdorong menjauh ke bawah!
+          </div>
+        </div>
+      </div>
+
+      <div id="css-outline" class="materi-section" style="display: none">
+        <h1>Outline CSS</h1>
+        <p>
+          Outline adalah garis tambahan yang digambar tepat di
+          <strong>luar garis tepi (border)</strong> elemen untuk membuat elemen
+          tersebut terlihat lebih menonjol atau fokus. Perbedaan utama outline
+          dengan border adalah outline tidak memakan ruang tata letak halaman
+          (tidak memengaruhi ukuran dimensi lebar/tinggi kotak elemen) dan
+          digambar di luar batas margin/border.
+        </p>
+        <div class="code-title">Syntax Kode CSS:</div>
+        <div class="code-example">
+          .kotak-outline { <br />border: 2px solid black;<br />
+          outline: 4px solid #ff4d6d;<br />
+          }
+        </div>
+        <div class="preview-title">Hasil Tampilan di Layar (Live Preview):</div>
+        <div class="preview-box" style="padding: 20px">
+          <div
+            style="
+              border: 2px solid black;
+              outline: 4px solid #ff4d6d;
+              padding: 10px;
+              text-align: center;
+              color: #333;
+              background: white;
+              font-weight: bold;
+            "
+          >
+            Kotak ini memiliki border hitam, dan di luar border hitam terdapat
+            garis outline berwarna pink cerah!
+          </div>
+        </div>
+      </div>
+      <!-- Kuis Latihan CSS Berdasarkan Struktur Kuis HTML -->
+      <div id="kuis-css" class="materi-section" style="display: none">
+        <h1>Uji Kemampuan CSS</h1>
+        <div class="quiz-container" id="css-quiz-card-container">
+          <div
+            id="css-quiz-progress"
+            style="
+              font-size: 14px;
+              color: #888;
+              margin-bottom: 10px;
+              font-weight: bold;
+            "
+          >
+            Soal 1 dari 10
+          </div>
+          <p
+            id="css-quiz-question"
+            style="font-size: 16px; font-weight: 600; margin-bottom: 15px"
+          ></p>
+          <div id="css-quiz-options"></div>
+          <p
+            id="css-hasil-kuis"
+            style="margin-top: 15px; font-weight: bold; min-height: 24px"
+          ></p>
+          <div
+            class="quiz-buttons"
+            style="display: flex; gap: 10px; margin-top: 15px"
+          >
+            <button id="css-btn-submit-quiz" onclick="cekJawabanKuisCSS()">
+              Kirim Jawaban
+            </button>
+            <button
+              id="css-btn-next-quiz"
+              onclick="lanjutSoalKuisCSS()"
+              style="display: none; background-color: #ff4d6d"
+            >
+              Selanjutnya <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="js-pengertian" class="materi-section" style="display: none">
+        <h1>Pengertian JavaScript</h1>
+        <p>
+          JavaScript (JS) adalah bahasa pemrograman tingkat tinggi, dinamis, dan
+          bersifat <i>client-side scripting</i>. Jika HTML bertindak sebagai
+          struktur bangunan website dan CSS sebagai desain tampilannya, maka
+          JavaScript bertindak sebagai
+          <strong>otak atau sistem penggerak</strong> yang membuat website
+          tersebut menjadi hidup, interaktif, dan dinamis.
+        </p>
+        <p>
+          Dengan JavaScript, Anda dapat membuat fitur-fitur interaktif seperti
+          tombol penampil pop-up, kalkulator, pembaruan konten secara
+          *real-time* tanpa memuat ulang halaman (AJAX), animasi grafik,
+          validasi formulir input, hingga logika permainan.
+        </p>
+      </div>
+
+      <div id="js-cara" class="materi-section" style="display: none">
+        <h1>Cara Menambahkan JavaScript ke HTML</h1>
+        <p>
+          Ada dua cara utama yang paling sering digunakan untuk menyisipkan kode
+          JavaScript ke dalam dokumen HTML Anda:
+        </p>
+
+        <h3>A. Internal JavaScript</h3>
+        <p>
+          Kode JavaScript ditulis langsung di dalam file HTML menggunakan tag
+          <code>&lt;script&gt;</code>. Biasanya diletakkan di bagian paling
+          bawah sebelum penutup tag <code>&lt;/body&gt;</code> agar halaman web
+          selesai dimuat terlebih dahulu.
+        </p>
+        <div class="code-title">Contoh Internal JS:</div>
+        <div class="code-example">
+          &lt;script&gt; <br />
+          console.log("Halo dari Internal JS!"); <br />
+          &lt;/script&gt;
+        </div>
+
+        <h3>B. External JavaScript</h3>
+        <p>
+          Kode JavaScript ditulis di dalam file terpisah dengan ekstensi
+          <code>.js</code>, lalu dihubungkan ke file HTML menggunakan atribut
+          <code>src</code> pada tag <code>&lt;script&gt;</code>. Ini merupakan
+          metode terbaik agar kode tetap rapi.
+        </p>
+        <div class="code-title">Contoh Hubungan External JS:</div>
+        <div class="code-example">
+          &lt;script src="script.js"&gt;&lt;/script&gt;
+        </div>
+      </div>
+
+      <div id="js-sintaks" class="materi-section" style="display: none">
+        <h1>Sintaks JavaScript</h1>
+        <p>
+          JavaScript memiliki beberapa aturan sintaksis penting. Untuk membuat
+          variabel, kita dapat menggunakan kata kunci <code>var</code>,
+          <code>let</code>, atau <code>const</code>. Setiap baris pernyataan
+          opsional diakhiri dengan tanda titik koma (<code>;</code>), dan
+          JavaScript bersifat <em>Case-Sensitive</em> (membedakan huruf besar
+          dan huruf kecil, contoh: variabel <code>nama</code> berbeda dengan
+          <code>Nama</code>).
+        </p>
+        <div class="code-title">Syntax Kode JavaScript:</div>
+        <div class="code-example">
+          let namaAplikasi = "Basic CoderEdu"; <br />
+          const versi = 2.0; <br />
+          console.log(namaAplikasi + " Versi " + versi);
+        </div>
+        <div class="preview-title">Hasil Output Konsol Browser:</div>
+        <div class="preview-box-terminal">Basic CoderEdu Versi 2.0</div>
+      </div>
+
+      <div id="js-operator" class="materi-section" style="display: none">
+        <h1>Operator JavaScript</h1>
+        <p>
+          Operator digunakan untuk melakukan operasi aritmatika (matematika)
+          atau perbandingan logika pada variabel dan nilai data. Jenis operator
+          yang paling sering digunakan meliputi operator aritmatika
+          (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+          <code>%</code>) dan operator penugasan (<code>=</code>).
+        </p>
+        <div class="code-title">Syntax Kode JavaScript:</div>
+        <div class="code-example">
+          let angka1 = 10; <br />
+          let angka2 = 5; <br />
+          let hasilTambah = angka1 + angka2; <br />
+          let hasilKali = angka1 * angka2; <br />
+          console.log("Hasil: " + hasilTambah + " dan " + hasilKali);
+        </div>
+        <div class="preview-title">Hasil Output:</div>
+        <div class="preview-box-terminal">Hasil: 15 dan 50</div>
+      </div>
+
+      <div id="js-kondisi" class="materi-section" style="display: none">
+        <h1>Kondisi IF Else JavaScript</h1>
+        <p>
+          Pernyataan kondisional digunakan untuk melakukan tindakan aksi
+          tindakan yang berbeda berdasarkan kondisi logika yang dievaluasi. Jika
+          kondisi bernilai benar (<code>true</code>), maka blok kode di dalam
+          <code>if</code> akan dieksekusi. Jika salah (<code>false</code>),
+          sistem akan beralih ke blok <code>else</code>.
+        </p>
+        <div class="code-title">Syntax Kode JavaScript:</div>
+        <div class="code-example">
+          let nilaiUjian = 85; <br />
+          if (nilaiUjian >= 75) { <br />
+          console.log("Status: LULUS"); <br />} else { console.log("Status:
+          REMEDIAL"); <br />}
+        </div>
+        <div class="preview-title">Hasil Output:</div>
+        <div class="preview-box-terminal">Status: LULUS</div>
+      </div>
+
+      <div id="js-perulangan" class="materi-section" style="display: none">
+        <h1>Perulangan JavaScript</h1>
+        <p>
+          Perulangan sangat berguna untuk menjalankan baris kode yang sama
+          secara berulang-ulang selama kondisi tertentu terpenuhi. Struktur
+          perulangan yang paling umum digunakan adalah <code>for</code> loop.
+        </p>
+        <div class="code-title">Syntax Kode JavaScript:</div>
+        <div class="code-example">
+          for (let i = 1; i &lt;= 3; i++) { <br />console.log("Perulangan ke-" +
+          i); <br />}
+        </div>
+        <div class="preview-title">Hasil Output:</div>
+        <div class="preview-box-terminal">
+          Perulangan ke-1 Perulangan ke-2 Perulangan ke-3
+        </div>
+      </div>
+
+      <div id="js-functions" class="materi-section" style="display: none">
+        <h1>Functions JavaScript</h1>
+        <p>
+          Fungsi adalah sekumpulan blok kode terorganisir yang dirancang khusus
+          untuk melakukan tugas tertentu. Fungsi tidak akan berjalan sebelum ia
+          dipanggil (*invoke*). Fungsi sangat membantu dalam mencegah penulisan
+          kode yang berulang-ulang (*reusable code*).
+        </p>
+        <div class="code-title">Syntax Kode JavaScript:</div>
+        <div class="code-example">
+          function sapaPengguna(username) { <br />
+          return "Selamat datang kembali, " + username + "!"; <br />} <br />
+          // Memanggil fungsi dan menyimpannya ke variabel <br />let pesan =
+          sapaPengguna("SiswaEduPink"); <br />console.log(pesan);
+        </div>
+        <div class="preview-title">Hasil Output:</div>
+        <div class="preview-box-terminal">
+          Selamat datang kembali, SiswaEduPink!
+        </div>
+      </div>
+
+      <div id="js-class" class="materi-section" style="display: none">
+        <h1>Class JavaScript</h1>
+        <p>
+          Sejak pembaruan ECMAScript 6 (ES6), JavaScript mendukung pembuatan
+          struktur kelas bertipe OOP (Object-Oriented Programming). Class
+          bertindak sebagai cetakan blueprint untuk membuat objek konkret yang
+          memiliki properti awal lewat metode khusus bernama
+          <code>constructor()</code>.
+        </p>
+        <div class="code-title">Syntax Kode JavaScript:</div>
+        <div class="code-example">
+          class Mobil { <br />constructor(merek) { <br />this.namaMobil = merek;
+          <br />} <br />} <br />
+          let mobilSaya = new Mobil("Toyota"); <br />
+          console.log("Mobil saya adalah " + mobilSaya.namaMobil);
+        </div>
+        <div class="preview-title">Hasil Output:</div>
+        <div class="preview-box-terminal">Mobil saya adalah Toyota</div>
+      </div>
+
+      <div id="js-array" class="materi-section" style="display: none">
+        <h1>Array JavaScript</h1>
+        <p>
+          Array adalah variabel khusus berjenis objek yang mampu menyimpan lebih
+          dari satu nilai data dalam satu waktu sekaligus dengan tipe data yang
+          bisa berbeda-beda. Nilai di dalam Array diakses berdasarkan nomor urut
+          urutan indeksnya yang dimulai dari angka <code>0</code>.
+        </p>
+        <div class="code-title">Syntax Kode JavaScript:</div>
+        <div class="code-example">
+          let bahasaWeb = ["HTML", "CSS", "JavaScript"]; <br />
+          console.log("Saya sedang belajar " + bahasaWeb[2]);
+        </div>
+        <div class="preview-title">Hasil Output:</div>
+        <div class="preview-box-terminal">Saya sedang belajar JavaScript</div>
+      </div>
+      <div id="kuis-js" class="materi-section" style="display: none">
+        <h1>Uji Kemampuan JavaScriptmu</h1>
+        <div class="quiz-container" id="js-quiz-card-container">
+          <div
+            id="js-quiz-progress"
+            style="
+              font-size: 14px;
+              color: #888;
+              margin-bottom: 10px;
+              font-weight: bold;
+            "
+          >
+            Soal 1 dari 5
+          </div>
+          <p
+            id="js-quiz-question"
+            style="font-size: 16px; font-weight: 600; margin-bottom: 15px"
+          ></p>
+          <div id="js-quiz-options"></div>
+          <p
+            id="js-hasil-kuis"
+            style="margin-top: 15px; font-weight: bold; min-height: 24px"
+          ></p>
+          <div
+            class="quiz-buttons"
+            style="display: flex; gap: 10px; margin-top: 15px"
+          >
+            <button id="js-btn-submit-quiz" onclick="cekJawabanKuisJS()">
+              Kirim Jawaban
+            </button>
+            <button
+              id="js-btn-next-quiz"
+              onclick="lanjutSoalKuisJS()"
+              style="display: none; background-color: #ff4d6d"
+            >
+              Selanjutnya <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="java-pengertian" class="materi-section" style="display: none">
+        <h1>Pengertian Java</h1>
+        <p>
+          Java adalah bahasa pemrograman tingkat tinggi yang bersifat
+          object-oriented (berorientasi objek) dan berbasis class. Salah satu
+          slogan paling terkenal dari Java adalah "Write Once, Run Anywhere"
+          (WORA), yang berarti kode program Java yang telah dikompilasi dapat
+          dijalankan di berbagai sistem operasi (Windows, Mac, Linux) tanpa
+          perlu dikompilasi ulang, berkat adanya komponen bernama Java Virtual
+          Machine (JVM).
+        </p>
+      </div>
+
+      <div id="java-hello" class="materi-section" style="display: none">
+        <h1>Print Hello World di Java</h1>
+        <p>
+          Untuk mencetak teks atau string ke layar dalam pemrograman Java, kita
+          wajib menuliskannya di dalam metode utama kelas. Perintah yang
+          digunakan untuk memproses instruksi pencetakan ini adalah fungsi
+          bawaan Java.
+        </p>
+        <div class="code-title">Syntax Kode Java:</div>
+        <div class="code-example">
+          public class Main { <br />
+          public static void main(String[] args) { <br />
+          System.out.println("Hello World"); <br />} <br />}
+        </div>
+        <div class="preview-title">Hasil Tampilan Output di Terminal:</div>
+        <div class="preview-box-terminal">Hello World</div>
+      </div>
+
+      <div id="java-syntax" class="materi-section" style="display: none">
+        <h1>Syntax Dasar Java</h1>
+        <p>
+          Setiap baris kode program Java yang dieksekusi harus selalu berada di
+          dalam sebuah wadah bernama <code>class</code>. Nama class tersebut
+          harus ditulis sama persis dengan nama file fisik berkas penyimpanannya
+          (sensitif terhadap huruf besar dan kecil). Selain itu, setiap baris
+          pernyataan instruksi wajib diakhiri dengan tanda titik koma
+          (<code>;</code>).
+        </p>
+        <div class="code-title">Contoh Aturan Struktur:</div>
+        <div class="code-example">
+          // Nama kelas harus sama dengan nama file <br />
+          Main.java public class Main { <br />// Fungsi Utama <br />
+          public static void main(String[] args) { <br />
+          // Pernyataan kode diakhiri dengan semicolon (;) <br />
+          System.out.println("Belajar Syntax Java"); <br />} <br />}
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">Belajar Syntax Java</div>
+      </div>
+
+      <div id="java-output" class="materi-section" style="display: none">
+        <h1>Output Java</h1>
+        <p>
+          Jika kita ingin memproses atau menampilkan suatu nilai output data ke
+          layar, kita wajib menggunakan metode perintah dari class sistem yaitu
+          <code>System.out.println()</code> untuk cetak baris baru otomatis,
+          atau opsi lainnya yaitu <code>System.out.print()</code> jika ingin
+          mencetak teks tanpa tambahan baris baru setelahnya.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          System.out.print("Satu, "); <br />
+          System.out.println("Dua"); <br />
+          System.out.println("Tiga");
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">Satu, Dua Tiga</div>
+      </div>
+
+      <div id="java-komen" class="materi-section" style="display: none">
+        <h1>Komentar Java</h1>
+        <p>
+          Komentar digunakan untuk memberikan catatan dokumentasi internal kode
+          agar mudah dibaca oleh programmer lain. Baris komentar sepenuhnya akan
+          diabaikan oleh compiler Java saat program dijalankan. Java mendukung
+          komentar satu baris menggunakan tanda garis miring ganda
+          (<code>//</code>) dan komentar multi-baris menggunakan kombinasi tanda
+          (<code>/* ... */</code>).
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          // Ini komentar satu baris <br />/* Ini komentar yang panjang atau
+          lebih dari satu baris */ <br />System.out.println("Komentar
+          tersembunyi!");
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">Komentar tersembunyi!</div>
+      </div>
+
+      <div id="java-variabel" class="materi-section" style="display: none">
+        <h1>Variabel Java</h1>
+        <p>
+          Variabel adalah wadah penyimpanan sementara memori komputer untuk
+          mengamankan nilai data selama program dijalankan. Untuk membuat sebuah
+          variabel baru di Java, kita wajib mendeklarasikan jenis tipe datanya
+          terlebih dahulu sebelum menuliskan nama variabel beserta nilai
+          datanya.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          String nama = "EduPink"; <br />
+          int angka = 25; <br />System.out.println(nama + " berumur " + angka);
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">EduPink berumur 25</div>
+      </div>
+
+      <div id="java-td-primitive" class="materi-section" style="display: none">
+        <h1>Tipe Data Primitive</h1>
+        <p>
+          Tipe data primitif adalah tipe data bawaan orisinal dari Java yang
+          menentukan ukuran dan jenis nilai data dasar secara langsung, serta
+          tidak memiliki metode fungsi objek tambahan bawaan sendiri. Terdiri
+          dari 8 macam jenis utama.
+        </p>
+        <div class="code-title">Contoh Penggunaan:</div>
+        <div class="code-example">
+          int angkaBulat = 1000; <br />double angkaDesimal = 19.99; <br />
+          char inisial = 'A'; <br />boolean status = true; <br />
+          System.out.println(angkaBulat + " | " + angkaDesimal + " | " + inisial
+          + " | " + status);
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">1000 | 19.99 | A | true</div>
+      </div>
+
+      <div
+        id="java-td-nonprimitive"
+        class="materi-section"
+        style="display: none"
+      >
+        <h1>Tipe Data Non-Primitive</h1>
+        <p>
+          Tipe data non-primitif juga biasa disebut sebagai tipe data referensi
+          (*Reference Types*) karena merujuk atau mengarah pada objek
+          instansiasi tertentu. Tipe data ini dibuat oleh programmer dan
+          memiliki banyak metode fungsi internal yang bisa dipanggil, contoh
+          paling populer adalah tipe data objek teks kumpulan karakter teks
+          (*String*).
+        </p>
+        <div class="code-title">Contoh Penggunaan:</div>
+        <div class="code-example">
+          String teksObjek = "Halo Dunia Java"; <br />
+          System.out.println(teksObjek.toUpperCase()); <br />
+          // Memanggil metode bawaan
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">HALO DUNIA JAVA</div>
+      </div>
+
+      <div id="java-operator" class="materi-section" style="display: none">
+        <h1>Operator Java</h1>
+        <p>
+          Operator adalah sekumpulan simbol matematika khusus yang digunakan
+          untuk menjalankan operasi kalkulasi matematis, manipulasi logika,
+          ataupun perbandingan antar nilai data variabel di dalam program Java.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          int x = 10; <br />int y = 5; <br />System.out.println("Hasil Tambah: "
+          + (x + y)); <br />
+          System.out.println("Apakah Lebih Besar? " + (x > y));
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">
+          Hasil Tambah: 15 Apakah Lebih Besar? true
+        </div>
+      </div>
+
+      <div id="java-kondisi" class="materi-section" style="display: none">
+        <h1>Seleksi Kondisi Java</h1>
+        <p>
+          Blok penyeleksian kondisi digunakan untuk mengontrol aliran jalannya
+          program. Pernyataan di dalam blok kode <code>if</code> hanya akan
+          diproses dan dieksekusi jika kondisi syarat matematika yang diuji
+          menghasilkan nilai kebenaran berstatus benar (*true*). Jika salah,
+          program beralih ke blok kode <code>else</code>.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          int nilai = 75; <br />
+          if (nilai >= 70) { <br />System.out.println("Lulus Kuliah!"); <br />}
+          else { <br />System.out.println("Remedial."); <br />}
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">Lulus Kuliah!</div>
+      </div>
+
+      <div id="java-switch" class="materi-section" style="display: none">
+        <h1>Switch Case Java</h1>
+        <p>
+          Pernyataan penyeleksian struktur <code>switch</code> digunakan untuk
+          memilih salah satu dari banyak cabang blok kode alternatif secara
+          efisien. Sangat ideal dipakai untuk menggantikan tumpukan logika
+          <code>if...else</code> yang bercabang terlalu banyak agar kode lebih
+          mudah dibaca.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          int hari = 2; <br />
+          switch (hari) { <br />case 1: System.out.println("Senin"); <br />
+          break; <br />
+          case 2: System.out.println("Selasa"); <br />break; <br />
+          default: System.out.println("Hari Lain"); <br />
+          }
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">Selasa</div>
+      </div>
+
+      <div id="java-while" class="materi-section" style="display: none">
+        <h1>While Loop Java</h1>
+        <p>
+          Struktur perulangan <code>while</code> berfungsi untuk mengulang
+          eksekusi sekelompok baris kode secara terus-menerus selama kondisi
+          logika syarat yang ditentukan di awal pemeriksaan selalu terpenuhi
+          atau bernilai benar (*true*).
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          int i = 1; <br />
+          while (i <= 3) { <br />
+          System.out.println("Perulangan ke-" + i); <br />
+          i++; <br />
+          }
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">
+          Perulangan ke-1 Perulangan ke-2 Perulangan ke-3
+        </div>
+      </div>
+
+      <div id="java-for" class="materi-section" style="display: none">
+        <h1>For Loop Java</h1>
+        <p>
+          Perulangan <code>for</code> sangat ideal digunakan apabila Anda sudah
+          mengetahui dengan pasti berapa kali jumlah perulangan baris instruksi
+          tersebut ingin dijalankan. Menyusun inisialisasi, syarat batas
+          perulangan, dan ekspresi aritmatika penambahan dalam satu baris
+          terpadu.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          for (int j = 1; j <= 3; j++) { <br />System.out.println("Angka: " +
+          j); <br />}
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">
+          Angka: 1 <br />Angka: 2 <br />Angka: 3
+        </div>
+      </div>
+
+      <div id="java-break" class="materi-section" style="display: none">
+        <h1>Break & Continue</h1>
+        <p>
+          Pernyataan <code>break</code> digunakan untuk menghentikan paksa
+          putaran siklus perulangan secara instan dan langsung keluar dari blok
+          loop berjalan. Sedangkan pernyataan <code>continue</code> digunakan
+          untuk melompati satu iterasi putaran saat ini dan langsung meloncat ke
+          putaran siklus berikutnya.
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          for (int k = 1; k <= 5; k++) { <br />if (k==3) { <br />break; <br />//
+          Berhenti total ketika k bernilai 3 <br />} <br />
+          System.out.println("Nilai K: " + k); <br />}
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">Nilai K: 1 Nilai K: 2</div>
+      </div>
+
+      <div id="java-array" class="materi-section" style="display: none">
+        <h1>Array Java</h1>
+        <p>
+          Array adalah variabel khusus yang digunakan untuk menyimpan sekumpulan
+          data dengan tipe data yang sejenis dalam satu nama wadah tunggal.
+          Pengaksesan data elemen di dalam susunan struktur array dilakukan
+          dengan memanggil nomor urutan indeks elemennya yang selalu dimulai
+          dari angka nol (0).
+        </p>
+        <div class="code-title">Syntax Kode:</div>
+        <div class="code-example">
+          String[] mobil = {"Volvo", "BMW", "Toyota"}; <br />
+          System.out.println("Mobil pertama: " + mobil[0]);
+        </div>
+        <div class="preview-title">Output Terminal:</div>
+        <div class="preview-box-terminal">Mobil pertama: Volvo</div>
+      </div>
+
+      <div id="kuis-java" class="materi-section" style="display: none">
+        <h1>Uji Kemampuan Java</h1>
+        <div class="quiz-container" id="java-quiz-card-container">
+          <div
+            id="java-quiz-progress"
+            style="
+              font-size: 14px;
+              color: #888;
+              margin-bottom: 10px;
+              font-weight: bold;
+            "
+          >
+            Soal 1 dari 5
+          </div>
+          <p
+            id="java-quiz-question"
+            style="font-size: 16px; font-weight: 600; margin-bottom: 15px"
+          ></p>
+          <div id="java-quiz-options"></div>
+          <p
+            id="java-hasil-kuis"
+            style="margin-top: 15px; font-weight: bold; min-height: 24px"
+          ></p>
+          <div
+            class="quiz-buttons"
+            style="display: flex; gap: 10px; margin-top: 15px"
+          >
+            <button id="java-btn-submit-quiz" onclick="cekJawabanKuisJava()">
+              Kirim Jawaban
+            </button>
+            <button
+              id="java-btn-next-quiz"
+              onclick="lanjutSoalKuisJava()"
+              style="display: none; background-color: #ff4d6d"
+            >
+              Selanjutnya <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="fab-theme" onclick="toggleDarkMode()" title="Ubah Tema">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
